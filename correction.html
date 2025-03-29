@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settlement History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-datepicker/3.4.1/react-datepicker.min.css">
+</head>
+<body class="bg-white">
+    <div class="p-6 bg-white min-h-screen">
+        <h1 class="text-2xl font-bold mb-4">SETTLEMENT HISTORY</h1>
+        
+       <!-- Filter Section -->
+<div class="mb-4 shadow-lg rounded-lg border border-gray-300 bg-gray-100 p-4">
+    <!-- Header --> 
+    <div class="font-semibold bg-gray-300 p-2">FILTER BY</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center p-3">
+        <!-- Driver Name Dropdown -->
+        <div class="flex flex-col">
+            <label class="block text-sm font-medium">DRIVER NAME</label>
+            <select class="w-full border rounded p-2 bg-gray-300">
+                <option>SINER</option>
+            </select>
+        </div>
+
+        <!-- Date Input -->
+        <div class="flex flex-col">
+            <label class="block text-sm font-medium">Date</label>
+            <div class="relative">
+                <input 
+                    type="text" 
+                    class="w-full p-2 border rounded bg-gray-300 font-semibold" 
+                    value="07-11-2024"
+                    readonly
+                />
+                <span class="absolute right-3 top-3 text-gray-700">
+                    <i class="fas fa-calendar"></i>
+                </span>
+            </div>
+        </div>
+
+        <!-- Search Button -->
+        <button class="px-4 py-2 bg-gray-300 text-black border rounded w-full">
+            SEARCH
+        </button>
+
+        <!-- View All Button -->
+        <button class="px-4 py-2 bg-gray-300 text-black border rounded w-full">
+            VIEW ALL
+        </button>
+
+        <!-- Save Icon -->
+        <button class="flex justify-center items-center p-2 text-gray-700 w-full">
+            <i class="fas fa-save text-xl"></i>
+        </button>
+    </div>
+</div>
+
+        
+        <!-- Settlement Table -->
+        <div class="mb-4 shadow-lg rounded-lg border border-gray-200">
+            <div class="p-4 overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">S.NO</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">CUSTOMER NAME</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">AMOUNT</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">CASH</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">CHEQUE</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">BANK TRANSFER</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">CN</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">DISCOUNT</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">TOTAL DEDUCTIONS</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">FINAL PAID AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap border">1</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">CASH (SINER)</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap border">SIN01-015489</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">07-11-2024</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            <td class="px-6 py-4 whitespace-nowrap border"></td>
+                        </tr>
+                        <tr class="font-bold">
+                            <td class="px-6 py-4 whitespace-nowrap border text-right" colspan="2">Total</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Cash Denomination and Total Invoice -->
+        <div class="shadow-lg rounded-lg border border-gray-200">
+            <div class="p-4">
+                <h2 class="text-lg font-semibold mb-2">Cash Denomination on 07-11-2024</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Cash Denomination Section -->
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">Notes</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border">Count</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap border">1000</td>
+                                <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap border">100</td>
+                                <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap border">50</td>
+                                <td class="px-6 py-4 whitespace-nowrap border">2</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap border">10</td>
+                                <td class="px-6 py-4 whitespace-nowrap border">4</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap border">5</td>
+                                <td class="px-6 py-4 whitespace-nowrap border"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Total Invoice Collection Section -->
+                    <div>
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap border font-medium">Total Invoice Collection</td>
+                                    <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap border font-medium">Discount & CN</td>
+                                    <td class="px-6 py-4 whitespace-nowrap border">(-) 0.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap border font-medium">Net Amount Settled</td>
+                                    <td class="px-6 py-4 whitespace-nowrap border">142.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap border" colspan="2">
+                                        Total Cash Collection For The Day : 142.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap border" colspan="2">
+                                        Total Cheque Collection For The Day : 0.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap border" colspan="2">
+                                        Total Bank Transfer For The Day : 0.00
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
