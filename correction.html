@@ -12,27 +12,28 @@
     <div class="p-6 bg-white min-h-screen">
         <h1 class="text-2xl font-bold mb-4">SETTLEMENT HISTORY</h1>
         
-       <!-- Filter Section -->
-<div class="mb-4 shadow-lg rounded-lg border border-gray-300 bg-gray-100 p-4">
-    <!-- Header --> 
-    <div class="font-semibold bg-gray-300 p-2">FILTER BY</div>
+<!-- Filter Section -->
+<div class="mb-4 shadow-lg rounded-lg border border-gray-300 bg-gray-100 p-4 w-full">
+    <!-- Header -->
+    <div class="font-semibold bg-gray-300 p-2 text-black">FILTER BY</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center p-3">
-        <!-- Driver Name Dropdown -->
-        <div class="flex flex-col">
-            <label class="block text-sm font-medium">DRIVER NAME</label>
-            <select class="w-full border rounded p-2 bg-gray-300">
+    <!-- Grid Layout for Alignment -->
+    <div class="grid grid-cols-[30%_30%_10%_10%_2%] gap-8 items-center p-3">
+        <!-- Driver Name Dropdown (25%) -->
+        <div class="flex flex-col w-full">
+            <label class="block text-sm font-medium text-gray-700">DRIVER NAME</label>
+            <select class="w-full border border-gray-400 rounded p-2 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400">
                 <option>SINER</option>
             </select>
         </div>
 
-        <!-- Date Input -->
-        <div class="flex flex-col">
-            <label class="block text-sm font-medium">Date</label>
+        <!-- Date Input (25%) -->
+        <div class="flex flex-col w-full">
+            <label class="block text-sm font-medium text-gray-700">Date</label>
             <div class="relative">
                 <input 
                     type="text" 
-                    class="w-full p-2 border rounded bg-gray-300 font-semibold" 
+                    class="w-full p-2 border border-gray-400 rounded font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-gray-400" 
                     value="07-11-2024"
                     readonly
                 />
@@ -42,22 +43,35 @@
             </div>
         </div>
 
+       
         <!-- Search Button -->
-        <button class="px-4 py-2 bg-gray-300 text-black border rounded w-full">
-            SEARCH
-        </button>
+<div class="flex flex-col w-full">
+    <label class="block text-sm font-medium text-gray-700 invisible">Search</label>
+    <button class="px-4 py-2 bg-gray-300 text-black border border-gray-400 rounded w-full hover:bg-gray-400 transition">
+        SEARCH
+    </button>
+</div>
 
-        <!-- View All Button -->
-        <button class="px-4 py-2 bg-gray-300 text-black border rounded w-full">
-            VIEW ALL
-        </button>
 
-        <!-- Save Icon -->
-        <button class="flex justify-center items-center p-2 text-gray-700 w-full">
-            <i class="fas fa-save text-xl"></i>
-        </button>
+        <!-- View All Button-->
+<div class="flex flex-col w-full">
+    <label class="block text-sm font-medium text-gray-700 invisible">View All</label>
+    <button class="px-4 py-2 bg-gray-300 text-black border border-gray-400 rounded w-full hover:bg-gray-400 transition">
+        VIEW ALL
+    </button>
+</div>
+
+        <!-- Save Icon (10%) -->
+<div class="flex flex-col w-full">
+    <label class="block text-sm font-medium text-gray-700 invisible">Save</label>
+    <button class="flex justify-center items-center p-2 text-gray-700  hover:bg-gray-200 transition">
+        <i class="fas fa-save text-xl"></i>
+    </button>
+</div>
+
     </div>
 </div>
+
 
         
         <!-- Settlement Table -->
