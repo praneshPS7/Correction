@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settlement History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-datepicker/3.4.1/react-datepicker.min.css">
+</head>
+<body class="bg-white">
+    <div class="p-6 bg-white min-h-screen">
+        <h1 class="text-2xl font-bold mb-4">SETTLEMENT HISTORY</h1>
+        
+<!-- Filter Section -->
+<div class="mb-4 shadow-lg rounded-lg border border-gray-300 bg-gray-100 p-4 w-full">
+    <!-- Header -->
+    <div class="font-semibold bg-gray-300 p-2 text-black">FILTER BY</div>
+
+    <!-- Grid Layout for Alignment -->
+    <div class="grid grid-cols-[30%_30%_10%_10%_2%] gap-8 items-center p-3">
+        <!-- Driver Name Dropdown (25%) -->
+        <div class="flex flex-col w-full">
+            <label class="block text-sm font-medium text-gray-700">DRIVER NAME</label>
+            <select class="w-full border border-gray-400 rounded p-2 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400">
+                <option>SINER</option>
+            </select>
+        </div>
+
+        <!-- Date Input (25%) -->
+        <div class="flex flex-col w-full">
+            <label class="block text-sm font-medium text-gray-700">Date</label>
+            <div class="relative">
+                <input 
+                    type="text" 
+                    class="w-full p-2 border border-gray-400 rounded font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-gray-400" 
+                    value="07-11-2024"
+                    readonly
+                />
+                <span class="absolute right-3 top-3 text-gray-700">
+                    <i class="fas fa-calendar"></i>
+                </span>
+            </div>
+        </div>
+
+       
+        <!-- Search Button -->
+<div class="flex flex-col w-full">
+    <label class="block text-sm font-medium text-gray-700 invisible">Search</label>
+    <button class="px-4 py-2 bg-gray-300 text-black border border-gray-400 rounded w-full hover:bg-gray-400 transition">
+        SEARCH
+    </button>
+</div>
+
+
+        <!-- View All Button-->
+<div class="flex flex-col w-full">
+    <label class="block text-sm font-medium text-gray-700 invisible">View All</label>
+    <button class="px-4 py-2 bg-gray-300 text-black border border-gray-400 rounded w-full hover:bg-gray-400 transition">
+        VIEW ALL
+    </button>
+</div>
+
+        <!-- Save Icon (10%) -->
+<div class="flex flex-col w-full">
+    <label class="block text-sm font-medium text-gray-700 invisible">Save</label>
+    <button class="flex justify-center items-center p-2 text-gray-700  hover:bg-gray-200 transition">
+        <i class="fas fa-save text-xl"></i>
+    </button>
+</div>
+
+    </div>
+</div>
+
+
+        
+        <!-- Settlement Table -->
+        <div class="mb-4 shadow-lg rounded-lg border border-grey-200">
+            <div class="p-4 overflow-x-auto">
+                <table class="min-w-full divide-y divide-black">
+                    <thead class="bg-white">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">S.NO</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">CUSTOMER NAME</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">AMOUNT</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">CASH</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">CHEQUE</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">BANK TRANSFER</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">CN</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">DISCOUNT</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">TOTAL DEDUCTIONS</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border border-black">FINAL PAID AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">1</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">CASH (SINER)</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                        </tr>
+
+                        <tr class="bg-white">
+                            <td colspan="5" class="px-6 py-2"> <!-- Reduced padding from py-4 to py-2 -->
+                                <div class="border border-black p-2 bg-gray-200 rounded-lg shadow-md ">
+                                    <div class="flex justify-between text-sm "> <!-- Added text-sm for smaller text -->
+                                        <span>SIN01-015489</span>
+                                        <span>07-11-2024</span>
+                                        <span>142.00</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr >
+                            <td class="px-6 py-4 whitespace-nowrap border border-black" colspan="2">Total</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">0.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+       
+        <!-- Cash Denomination and Total Invoice -->
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
+            <!-- Left Table: Cash Denomination -->
+            <table class="w-full border border-black">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th colspan="2" class="px-6 py-3 text-left font-bold text-black uppercase tracking-wider border border-black">
+                            Cash Denomination on 07-11-2024
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td class="w-2/3 px-6 py-1 whitespace-nowrap border border-black font-bold">Notes</td>
+                        <td class="w-1/3 px-6 py-1 whitespace-nowrap border border-black"></td>
+                    </tr>
+                    <tr>
+                        <td class="w-2/3 px-6 py-1 whitespace-nowrap border border-black">1000</td>
+                        <td class="w-1/3 px-6 py-1 whitespace-nowrap border border-black"></td>
+                    </tr>
+                    <tr>
+                        <td class="w-2/3 px-6 py-1 whitespace-nowrap border border-black">500</td>
+                        <td class="w-1/3 px-6 py-1 whitespace-nowrap border border-black"></td>
+                    </tr>
+                    <tr>
+                        <td class="w-2/3 px-6 py-1 whitespace-nowrap border border-black">100</td>
+                        <td class="w-1/3 px-6 py-1 whitespace-nowrap border border-black"></td>
+                    </tr>
+                    <tr>
+                        <td class="w-2/3 px-6 py-1 whitespace-nowrap border border-black">50</td>
+                        <td class="w-1/3 px-6 py-1 whitespace-nowrap border border-black">2</td>
+                    </tr>
+                    <tr>
+                        <td class="w-2/3 px-6 py-1 whitespace-nowrap border border-black">10</td>
+                        <td class="w-1/3 px-6 py-1 whitespace-nowrap border border-black">4</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- Right Table: Invoice Collection -->
+            <table class="w-full border border-black">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th colspan="2" class="px-6 py-3 text-left font-bold text-black uppercase tracking-wider border border-black">
+                            Invoice Collection Summary
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black font-medium">Total Invoice Collection</td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black font-medium">Discount & CN</td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black">(-) 0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black font-medium">Net Amount Settled</td>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black">142.00</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black" colspan="2">
+                            <b>Total Cash Collection For The Day:</b> 142.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black" colspan="2">
+                            <b>Total Cheque Collection For The Day:</b> 0.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap border border-black" colspan="2">
+                            <b>Total Bank Transfer For The Day:</b> 0.00
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+</body>
+</html>
